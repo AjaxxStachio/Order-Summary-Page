@@ -1,0 +1,225 @@
+<!---
+File Name:      Poster.html
+Student Name:   Ajani Scarlett
+Student ID:     2302995
+Assignment:     2302995_Order_Summary_Lab
+Due Date:       30/10/2026
+GitHib Host:    https://ajaxxstachio.github.io/Student-Profile-Lab/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+        :root {
+            --pale-blue: hsl(225, 100%, 94%);
+            --bright-blue: hsl(245, 75%, 52%);
+            --very-pale-blue: hsl(225, 100%, 98%);
+            --desaturated-blue: hsl(224, 23%, 55%);
+            --dark-blue: hsl(223, 47%, 23%);
+            --hover-blue: hsl(245, 83%, 68%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Red Hat Display', sans-serif;
+            background-color: var(--pale-blue);
+            background-image:url("/pattern-background-desktop.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(13, 48, 130, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card-header {
+            background-color: #382AE1; 
+            height: 220px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+ 
+        .card-content {
+            padding: 45px 48px;
+        }
+
+        h1 {
+            color: var(--dark-blue);
+            font-size: 1.75rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: var(--desaturated-blue);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+  
+        .plan-box {
+            background-color: var(--very-pale-blue);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .plan-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .plan-name {
+            color: var(--dark-blue);
+            font-weight: 900;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .plan-price {
+            color: var(--desaturated-blue);
+            font-size: 1rem;
+        }
+
+        .change-link {
+            color: var(--bright-blue);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: underline;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .change-link:hover {
+            color: var(--hover-blue);
+            text-decoration: none;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            border: none;
+            font-family: inherit;
+            font-weight: 900;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: 0.3s ease;
+        }
+
+        .btn-payment {
+            background-color: var(--bright-blue);
+            color: white;
+            padding: 16px;
+            font-size: 0.95rem;
+            box-shadow: 0 20px 20px rgba(56, 42, 225, 0.2);
+            margin-bottom: 32px;
+        }
+
+        .btn-payment:hover {
+            background-color: var(--hover-blue);
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: var(--desaturated-blue);
+            font-size: 0.95rem;
+            padding: 0;
+            width: auto;
+            margin: 0 auto;
+        }
+
+        .btn-cancel:hover {
+            color: var(--dark-blue);
+        }
+  
+        @media (max-width: 480px) {
+            .card-content {
+                padding: 30px 24px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .description {
+                font-size: 0.95rem;
+                padding: 0;
+            }
+            
+            .plan-box {
+                padding: 16px;
+            }
+
+            .plan-left {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <div class="card-header">
+               <img src="illustration-hero.svg" alt="Banner" class="header-image">
+        </div>
+        
+        <div class="card-content">
+            <h1>Order Summary</h1>
+            <p class="description">
+                You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+            </p>
+        
+            <div class="plan-box">
+
+                <div class="plan-left">
+                    <img src="icon-music.svg" alt="Music icon" class="header-image">
+                
+                
+                    <div class="plan-details">
+                        <div class="plan-name">Annual Plan</div>
+                        <div class="plan-price">$59.99/year</div>
+                    </div>
+                </div>
+                <a href="#" class="change-link">Change</a>
+            </div>
+      
+            <button class="btn btn-payment">Proceed to Payment</button>
+            <button class="btn btn-cancel">Cancel Order</button>
+        </div>
+    </main>
+
+</body>
+</html>
